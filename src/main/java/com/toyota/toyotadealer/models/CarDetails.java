@@ -8,6 +8,7 @@ public class CarDetails {
     private String email;
     private String phone;
     private String model;
+    private String year;
     private String trim;
     private String driveTrain;
     private String colour;
@@ -46,6 +47,14 @@ public class CarDetails {
 
     public void setModel(String model) {
         this.model = model;
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
     }
 
     public String getTrim() {
