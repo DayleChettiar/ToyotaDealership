@@ -1,9 +1,15 @@
 package com.toyota.toyotadealer.models;
 
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
 
+@Entity
 public class CarDetails {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
     private String name;
     private String email;
     private String phone;
@@ -16,6 +22,14 @@ public class CarDetails {
     private BigDecimal purchasePrice;
     private Date purchaseDate;
     private boolean contact;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
