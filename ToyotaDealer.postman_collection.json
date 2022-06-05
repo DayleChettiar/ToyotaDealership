@@ -13,6 +13,33 @@
 				"url": "http://localhost:8080/api/v1/cars"
 			},
 			"response": []
+		},
+		{
+			"name": "getCarById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/v1/cars/3"
+			},
+			"response": []
+		},
+		{
+			"name": "CreateCar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 5,\r\n    \"name\": \"2020 Corolla LE Gen12\",\r\n    \"email\": \"dresnek@bikes.com\",\r\n    \"phone\": \"905-765-5555\",\r\n    \"model\": \"Corolla\",\r\n    \"year\": \"2020\",\r\n    \"trim\": \"LE CVT\",\r\n    \"driveTrain\": \"FWD\",\r\n    \"colour\": \"Blue\",\r\n    \"vinNumber\": \"5YFBPRBEXLP067815\",\r\n    \"purchasePrice\": 23500.00,\r\n    \"purchaseDate\": \"07-04-2022\",\r\n    \"contact\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/v1/cars"
+			},
+			"response": []
 		}
 	]
 }

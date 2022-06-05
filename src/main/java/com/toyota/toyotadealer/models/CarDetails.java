@@ -1,10 +1,14 @@
 package com.toyota.toyotadealer.models;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
 
 @Entity
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class CarDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -20,6 +24,7 @@ public class CarDetails {
     private String colour;
     private String vinNumber;
     private BigDecimal purchasePrice;
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="MM-dd-yyyy")
     private Date purchaseDate;
     private boolean contact;
 
